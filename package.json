@@ -1,0 +1,33 @@
+{
+  "name": "feb-animate-toggle",
+  "version": "0.0.0",
+  "description": "Angular directive that shows and hides a block element with animation effect.",
+  "main": "animate-toogle.js",
+  "scripts": {
+    "test": "./node_modules/karma/bin/karma start --browsers Firefox --single-run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/FlemmingBehrend/feb-animate-toggle.git"
+  },
+  "keywords": [
+    "angular",
+    "angularjs",
+    "toggle",
+    "show",
+    "hide"
+  ],
+  "author": "Flemming Behrend",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FlemmingBehrend/feb-animate-toggle/issues"
+  },
+  "homepage": "https://github.com/FlemmingBehrend/feb-animate-toggle",
+  "devDependencies": {
+    "jasmine-core": "^2.4.1",
+    "karma": "0.12.31",
+    "karma-firefox-launcher": "^0.1.3",
+    "karma-phantomjs-launcher-nonet": "^0.1.3",
+    "karma-jasmine": "^0.3.6"
+  }
+}
