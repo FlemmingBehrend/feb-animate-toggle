@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Example</title>
+</head>
+<body ng-app="ExampleApp" ng-controller="Ctrl">
+
+    <div feb-animate-toggle="{{error1}}" control="controlObject">
+        <div>
+            this will open
+            <span>Supports multiple elements</span>
+        </div>
+    </div>
+    <hr>
+
+    <br><br>
+    <div feb-animate-toggle="{{error2}}" control="controlObject1">
+        <div>
+            this will open
+            <br>
+            <span>Supports multiple elements</span>
+        </div>
+    </div>
+
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="animate-toggle.js"></script>
+<script>
+    angular.module('ExampleApp', ['feb.animate-toggle'])
+            .controller('Ctrl', function ($scope) {
+                $scope.error1 = 'error12';
+                $scope.error2 = 'error22';
+                $scope.toggleText = 'open me';
+                $scope.controlObject = {
+                    toggleText: $scope.toggleText,
+                    show: true,
+                    duration: 1000
+                };
+                $scope.controlObject1 = {
+                    toggleText: 'open me again',
+                    show: false,
+                    duration: 3000
+                };
+            });
+</script>
+</body>
+</html>
