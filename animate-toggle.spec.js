@@ -6,7 +6,7 @@
         var scope, compile;
 
         beforeEach(function () {
-            module('feb-animate-toggle');
+            module('feb.animate-toggle');
             inject(function ($compile, $rootScope) {
                 scope = $rootScope.$new();
                 compile = $compile;
@@ -23,8 +23,15 @@
 
             describe('defaults', function() {
 
-                it('hides the content', function() {
+                it('throws exceptions if no identifier is specified', function () {
+                    expect(function () {
+                        ce('<feb-animate-toggle></feb-animate-toggle>');
+                    }).toThrow('Error initializing feb-animate-toggle. Identifier missing.');
+                });
 
+                it('hides the content', function() {
+                    var el = ce('<feb-animate-toggle identifier="i">this is hidden</feb-animate-toggle>');
+                    expect(el.find('.i').attr('style')).toBe('display: none');
                 });
 
                 it('shows only toggle buttom if now toggle text is specified', function() {
@@ -50,7 +57,7 @@
                 it('sets the content to start as displayed', function() {
 
                 });
-                
+
             });
         });
 
